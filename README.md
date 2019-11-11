@@ -3,7 +3,7 @@
 Complete a group analysis on the FFL data using the cluster.
 
 - Use the first level results you have calculated for each subject
-- Calculate a one sample t-test for each of the three lower level contrasts using FLAME mixed effects (`--runmode=flame`). Put your scripts in `flame.sh` and `sbatch_flame.sh`
+- Calculate a one sample t-test for each of the three lower level contrasts using FLAME1 mixed effects (`--runmode=flame1`). Put your scripts in `flame.sh` and `sbatch_flame.sh`
 - Use cluster correction with a height threshold of $Z>2.3$ and cluster threshold $p < .05$
 - For each contrast, create a table that lists the following information for each significant cluster (a template to fill out is in `results.md`):
 	- Anatomical label and hemisphere
