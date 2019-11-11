@@ -1,0 +1,37 @@
+543  cd cope1.feat
+  544  smoothest -d 2 -m ../mask -r res4d
+  545  cluster --dlh=0.0256117 --volume=156257 -t 2.3 -p .05 --mm --peakdist=10 --othresh-thresh_zstat1_2.3 --olmax=localmax_zstat1_2.3.txt --oindex=index_zstat1_2.3 -i zstat1.nii.gz > clusters_zstat1_2.3.txt
+  546  cluster --dlh=0.0256117 --volume=156257 -t 2.3 -p .05 --mm --peakdist=10 --othresh=thresh_zstat1_2.3 --olmax=localmax_zstat1_2.3.txt --oindex=index_zstat1_2.3 -i zstat1.nii.gz > clusters_zstat1_2.3.txt
+  547  cd ..
+  548  ls
+  549  cd cope2.feat/
+  550  smoothest -d 2 -m ../mask -r res4d
+  551  cluster --dlh=0.0265322 --volume=156257 -t 2.3 -p .05 --mm --peakdist=10 --othresh=thresh_zstat1_2.3 --olmax=localmax_zstat1_2.3.txt --oindex=index_zstat1_2.3 -i zstat1.nii.gz > clusters_zstat1_2.3.txt
+  552  cd ..
+  553  ls
+  554  cd cope3.feat
+  555  smoothest -d 2 -m ../mask -r res4d
+  556  cluster --dlh=0.0271504 --volume=156257 -t 2.3 -p .05 --mm --peakdist=10 --othresh=thresh_zstat1_2.3 --olmax=localmax_zstat1_2.3.txt --oindex=index_zstat1_2.3 -i zstat1.nii.gz > clusters_zstat1_2.3.txt
+  557  atlasq list
+  558  atlasq query harvardoxford-cortical -c -2 -18 62
+  559  atlasq query harvardoxford-cortical -c 44 -10 18
+  560  overlay 1 1 ../../bg_image -a \
+  561  overlay 1 1 ../bg_image -a thresh_zstat1_2.3 2.3 4 rendered_zstat1_2.3
+  562  slicer -s 4 -u rendered_zstat1_2.3 -S 2 4096 axial3.png
+  563  fsleyes /Users/brianaoshiro/f19-ex6-data/level2/cope3.feat/cope1.nii.gz 
+  564  fsleyes /Users/brianaoshiro/f19-ex6-data/level2/cope3.feat/index_zstat1_2.3.nii.gz 
+  565  ls
+  566  cd ..
+  567  ls
+  568  cd cope2.feat
+  569  ls
+  570  overlay 1 1 ../bg_image -a thresh_zstat1_2.3 2.3 4 rendered_zstat1_2.3
+  571  slicer -s 4 -u rendered_zstat1_2.3 -S 2 4096 axial3.png
+  572  slicer -s 4 -u rendered_zstat1_2.3 -S 2 4096 axial2.png
+  573  cd ..
+  574  cd cd cope1.feat
+  575  cd cope1.feat
+  576  ls
+  577  overlay 1 1 ../bg_image -a thresh_zstat1_2.3 2.3 4 rendered_zstat1_2.3
+  578  slicer -s 4 -u rendered_zstat1_2.3 -S 2 4096 axial1.png
+  579  history
