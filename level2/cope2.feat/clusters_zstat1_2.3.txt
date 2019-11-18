@@ -1,0 +1,2 @@
+Cluster Index	Voxels	P	-log10(P)	MAX	MAX X (mm)	MAX Y (mm)	MAX Z (mm)	COG X (mm)	COG Y (mm)	COG Z (mm)
+1	3078	7.15e-07	6.15	4.61	2	-12	64	3.97	-20.1	63.2

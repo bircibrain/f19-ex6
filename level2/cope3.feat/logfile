@@ -1,0 +1,3 @@
+flameo --cope=cope3 --vc=varcope3 --dvc=dof --mask=mask --ld=cope3.feat --dm=design.mat --cs=groupindicator.mat --tc=contrast.mat --runmode=flame1 
+---------------------------------------------
+
